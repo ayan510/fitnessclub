@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Grid, Icon, List, Menu, Segment } from 'semantic-ui-react';
+import { Button, Container, Grid, Icon, List, Menu, Segment } from 'semantic-ui-react';
 import './Home.css';
 import 'semantic-ui-css/semantic.min.css'; // Import Semantic UI CSS
 
@@ -49,7 +49,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home-container">
+    <Container>
       <h1 className="title">FITNESS CLUB</h1>
       <Menu pointing secondary className="menu" style={{ justifyContent: 'center' }}>
         <Menu.Item
@@ -76,7 +76,7 @@ const Home = () => {
       <div>
         <h1 className={`welcome-text${showWelcome ? '' : ' hidden'}`} style={{ marginTop: '20px', border: '1px solid', borderRadius: '4px', padding: '4px' }}>WELCOME</h1>
       </div>
-      <Segment className="content">
+      <Segment>
         {activeItem === 'Home' && (
           <div className="home-container">
             <Grid columns={5} divided className="icon-grid">
@@ -116,15 +116,16 @@ const Home = () => {
             <h2>Contact List</h2>
             <List divided relaxed>
               {contacts.map(contact => (
-                <List.Item key={contact.id}>
-                  <List.Content floated='left'>
-                    <List.Header>{contact.name}</List.Header>
-                  </List.Content>
+                <List.Item style={{ backgroundColor: '#ffd6d6' }} key={contact.id}>
                   <List.Content floated='right'>
-                    <Button icon color='green' size='tiny' onClick={() => handleCall(contact.phoneNumber)}>
-                      <Icon name='phone' />
-                    </Button>
+                    <Icon name='pencil' circular inverted color='blue' size='large' />
+                    <Icon name='phone' circular inverted color='green' size='large' />
+                    <Icon name='user' circular inverted color='teal' size='large' />
                   </List.Content>
+                  <List.Header as={`h3`}>{contact.name}</List.Header>
+                  <List.Content>sakjdhaiulsaskd</List.Content>
+                  <List.Content>sakjdhaiulsaskd</List.Content>
+                  <List.Content>sakjdhaiulsaskd</List.Content>
                 </List.Item>
               ))}
             </List>
@@ -152,7 +153,7 @@ const Home = () => {
           </div>
         )}
       </Segment>
-    </div>
+    </Container>
   );
 };
 

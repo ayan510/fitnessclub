@@ -1,15 +1,16 @@
 .home-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   justify-content: flex-start;
   height: 100vh;
 }
 
 .title {
   font-size: 32px;
-  margin-bottom: 40px; 
+  margin-bottom: 40px;
 }
+
 .icon-grid {
   margin-top: 20px;
 }
@@ -20,7 +21,8 @@
 
 .welcome-text {
   opacity: 1;
-  transition: opacity 1s ease-in-out; /* Add transition */
+  transition: opacity 1s ease-in-out;
+  /* Add transition */
 }
 
 .welcome-text.hidden {
@@ -46,19 +48,20 @@
   background-color: hsl(156, 97%, 50%) !important;
   color: black !important;
   border: solid;
-  border-radius: 10px !important;;
+  border-radius: 10px !important;
+  ;
 }
 
-.content {
+/* .content {
   width: 90%;
   padding: 20px;
   margin-top: 10px; 
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+} */
 
-.content > div {
+.content>div {
   font-size: 20px;
 }
 
